@@ -29,13 +29,15 @@ new_data2 = data2[, -1]
 
 names(new_data) == names(new_data2)
 
-
+##########################################
 library(dplyr)
 
 #full_data = full_join(new_data, new_data2, by = c("buildingaddress", "buildingtype", "greenmarkstatus"))
 
-inner_data = inner_join(new_data, new_data2, by = c("buildingaddress"))
 
+# Do an inner join here, use building address as key
+
+inner_data = inner_join(new_data, new_data2, by = c("buildingaddress"))
 
 final_data = inner_data[, c(1:9, 18 , 10)]
 
