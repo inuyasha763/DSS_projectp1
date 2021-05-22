@@ -32,7 +32,7 @@ names(new_data) == names(new_data2)
 
 library(dplyr)
 
-full_data = full_join(new_data, new_data2, by = c("buildingaddress", "buildingtype", "greenmarkstatus"))
+#full_data = full_join(new_data, new_data2, by = c("buildingaddress", "buildingtype", "greenmarkstatus"))
 
 inner_data = inner_join(new_data, new_data2, by = c("buildingaddress"))
 
